@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>success</h1>
+{% if context %}
+
+<table border="1 | 0">
+
+    <tr>
+        <th>EMPLOYEE ID</th>
+        <th>EMPLOYEE FIRST NAME</th>
+        <th>EMPLOYEE LAST NAME</th>
+        <th>EMPLOYEE ADDRESS</th>
+        <th>EMPLOYEE EMAIL</th>
+
+    </tr>
+    <tr>
+        {% for i in context %}
+        <td>{{ i.empid }}</td>
+        <td>{{ i.empfname }}</td>
+        <td>{{ i.emplname }}</td>
+        <td>{{ i.empaddress }}</td>
+        <td>{{ i.empemail }}</td><br></tr>{% endfor %}
+
+</table>
+{% endif %}
+
+</body>
+</html>
